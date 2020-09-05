@@ -4,7 +4,26 @@
 
 
 int main(void){
-
+	//Parameters setting
+	int r;
+	char bf[32];
+	//Initialize
+	lcd_init();// LCD
+	init_systick();// Systick
+	init_timer0();
+	
+	//Loop
+	while(1){
+		r=hr_spo2_id1();
+		sprintf(bf, "P ID: %10d", r);
+		lcd_print(0x00,bf);
+		r=hr_spo2_id2();
+		sprintf(bf, "R ID: %10d", r);
+		lcd_print(0x40,bf);
+		TIMER_Delay(TIMER0,410000);
+		
+	//----------------------------	
+	/*
 	//Parameters setting
 	int r, s=0, m=0, h=0;
 	char bf[32];
@@ -14,7 +33,7 @@ int main(void){
 	init_timer0();
 	GPIO_SetMode(PA, BIT12, GPIO_PMD_OUTPUT);
 	PA12 = 0;
-	
+	*/
 	/*
 	while(1){
 		while(TIMER_GetIntFlag(TIMER0)==0){
@@ -26,6 +45,7 @@ int main(void){
 	*/
 	
 	//Loop
+	/*
 	while(1){
 		r=bh1750();
 		if(s==60){s=0;m+=1;}
@@ -42,6 +62,6 @@ int main(void){
 		PA12 ^= 1;
 		TIMER_Delay(TIMER0,410000);
 		//delay_ms(820);//because bh1750() has a 180ms delay
-		
+		*/
 	}//--- while
 }//--- main

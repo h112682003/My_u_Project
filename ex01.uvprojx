@@ -432,11 +432,6 @@
               <FilePath>.\my_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>My_Project_MAX30102.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\My_Project_MAX30102.h</FilePath>
-            </File>
-            <File>
               <FileName>my_systick.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\my_systick.c</FilePath>
@@ -455,6 +450,16 @@
               <FileName>my_timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\my_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_max30102_setWR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\my_max30102_setWR.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_max30102.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\my_max30102.c</FilePath>
             </File>
           </Files>
         </Group>
