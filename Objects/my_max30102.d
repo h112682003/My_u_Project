@@ -28,3 +28,4 @@
 .\objects\my_max30102.o: C:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.7\Device\NANO100BN\Driver\i2s.h
 .\objects\my_max30102.o: C:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.7\Device\NANO100BN\Driver\lcd.h
 .\objects\my_max30102.o: My_Project_MAX30102.h
+.\objects\my_max30102.o: My_MAX30102.h

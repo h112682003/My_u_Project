@@ -27,25 +27,25 @@ Project File Date:  09/06/2020
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 (build 20)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
-compiling my_max30102_setWR.c...
-compiling my_uart.c...
-compiling gpio.c...
-compiling kd1602.c...
-compiling my_max30102.c...
-compiling my_bh1750.c...
 compiling main.c...
-compiling my_systick.c...
+compiling my_max30102_setWR.c...
+compiling my_bh1750.c...
 compiling my_timer.c...
 compiling clk.c...
+compiling my_systick.c...
 compiling my_i2c.c...
+compiling kd1602.c...
+compiling my_uart.c...
+compiling gpio.c...
+compiling my_max30102.c...
 assembling startup_Nano100Series.s...
 compiling sys.c...
 compiling timer.c...
-compiling uart.c...
 compiling retarget.c...
+compiling uart.c...
 compiling system_Nano100Series.c...
 linking...
-Program Size: Code=4804 RO-data=280 RW-data=20 ZI-data=2660  
+Program Size: Code=5840 RO-data=280 RW-data=20 ZI-data=2660  
 ".\Objects\ex01.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -61,11 +61,11 @@ Package Vendor: Nuvoton
                 Nuvoton::Device:Startup:3.01.000
                 Nuvoton ARM Cortex-M NuMicro Family Device Support
    * Component: Startup Version: 3.01.000
-   * Component: CLK Version: 3.01.000
-   * Component: Timer Version: 3.01.000
-   * Component: UART Version: 3.01.000
    * Component: GPIO Version: 3.01.000
+   * Component: CLK Version: 3.01.000
    * Component: SYS Version: 3.01.000
+   * Component: UART Version: 3.01.000
+   * Component: Timer Version: 3.01.000
 
 <h2>Collection of Component include folders:</h2>
   E:\¦¿«Ø¿o\¦ãîà\My_u_Project\RTE
@@ -78,31 +78,31 @@ Package Vendor: Nuvoton
    * Component: ARM::CMSIS:CORE:4.1.0
 
    * Component: Nuvoton::Device:Startup:3.01.000
-      Source file:   Device\NANO100BN\Source\ARM\startup_Nano100Series.s
-      Source file:   Device\NANO100BN\Driver\retarget.c
-      Source file:   Device\NANO100BN\Source\system_Nano100Series.c
       Include file:  Device\NANO100BN\Include\Nano100Series.h
-
-   * Component: Nuvoton::Device:Driver:CLK:3.01.000
-      Include file:  Device\NANO100BN\Driver\clk.h
-      Source file:   Device\NANO100BN\Driver\clk.c
-
-   * Component: Nuvoton::Device:Driver:Timer:3.01.000
-      Include file:  Device\NANO100BN\Driver\timer.h
-      Source file:   Device\NANO100BN\Driver\timer.c
-
-   * Component: Nuvoton::Device:Driver:UART:3.01.000
-      Source file:   Device\NANO100BN\Driver\uart.c
-      Include file:  Device\NANO100BN\Driver\uart.h
+      Source file:   Device\NANO100BN\Source\ARM\startup_Nano100Series.s
+      Source file:   Device\NANO100BN\Source\system_Nano100Series.c
+      Source file:   Device\NANO100BN\Driver\retarget.c
 
    * Component: Nuvoton::Device:Driver:GPIO:3.01.000
       Source file:   Device\NANO100BN\Driver\gpio.c
       Include file:  Device\NANO100BN\Driver\gpio.h
 
+   * Component: Nuvoton::Device:Driver:CLK:3.01.000
+      Source file:   Device\NANO100BN\Driver\clk.c
+      Include file:  Device\NANO100BN\Driver\clk.h
+
    * Component: Nuvoton::Device:Driver:SYS:3.01.000
-      Include file:  Device\NANO100BN\Driver\sys.h
       Source file:   Device\NANO100BN\Driver\sys.c
-Build Time Elapsed:  00:00:01
+      Include file:  Device\NANO100BN\Driver\sys.h
+
+   * Component: Nuvoton::Device:Driver:UART:3.01.000
+      Include file:  Device\NANO100BN\Driver\uart.h
+      Source file:   Device\NANO100BN\Driver\uart.c
+
+   * Component: Nuvoton::Device:Driver:Timer:3.01.000
+      Include file:  Device\NANO100BN\Driver\timer.h
+      Source file:   Device\NANO100BN\Driver\timer.c
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

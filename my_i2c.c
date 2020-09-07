@@ -41,19 +41,19 @@ void i2c_start(void){
     PF->PUEN |=  BIT4+BIT5;
  
     if(SDA==0){
-        SCL=0; delay(50);
+        SCL=0; delay(0);
     }
-    SDA=1; delay(50);
-    SCL=1; delay(50);
-    SDA=0; delay(50);
-    SCL=0; delay(50);
+    SDA=1; delay(0);
+    SCL=1; delay(0);
+    SDA=0; delay(0);
+    SCL=0; delay(0);
 }
 
 //--- Stop
 void i2c_stop(void){
-    SDA=0;  delay(50);
-    SCL=1;  delay(50);
-    SDA=1;  delay(50);
+    SDA=0;  delay(0);
+    SCL=1;  delay(0);
+    SDA=1;  delay(0);
 }
 
 //--- Write
@@ -69,7 +69,7 @@ uint8_t i2c_write(uint8_t d){
     SDA=r.b1; delay(0); SCL=1; delay(0); SCL=0;
     SDA=r.b0; delay(0); SCL=1; delay(0); SCL=0;
     //--- ACK
-    SDA=1; delay(20); SCL=1; delay(20); r.v=SDA; SCL=0;
+    SDA=1; delay(0); SCL=1; delay(0); r.v=SDA; SCL=0;
      
     return r.v;
 }
@@ -87,7 +87,7 @@ uint8_t i2c_read(uint8_t ack){
     delay(0); SCL=1; delay(0); r.b1 = SDA; SCL=0;
     delay(0); SCL=1; delay(0); r.b0 = SDA; SCL=0;
     //--- ACK
-    SDA = ack; delay(20); SCL=1; delay(20); SCL=0;
+    SDA = ack; delay(0); SCL=1; delay(0); SCL=0;
      
     SDA=1;
     return r.v;

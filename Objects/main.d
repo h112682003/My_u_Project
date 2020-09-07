@@ -29,3 +29,4 @@
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.7\Device\NANO100BN\Driver\lcd.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: My_Project_MAX30102.h
+.\objects\main.o: My_MAX30102.h
