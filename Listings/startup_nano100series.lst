@@ -379,12 +379,12 @@ ARM Macro Assembler    Page 6
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
 ork --depend=.\objects\startup_nano100series.d -o.\objects\startup_nano100serie
-s.o -IE:\¦¿«Ø¿o\¦ãîà\My_u_Project\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMS
-IS\Include -IC:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.7\Device\NANO100BN\Dri
-ver -IC:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.7\Device\NANO100BN\Include --
-predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 516" --predefine=
-"_RTE_ SETA 1" --list=.\listings\startup_nano100series.lst RTE\Device\NANO130KE
-3BN\startup_Nano100Series.s
+s.o -IC:\Users\USER\Desktop\Âàª`¯¸\My_u_Project\RTE -ID:\ARM\PACK\ARM\CMSIS\4.3
+.0\CMSIS\Include -ID:\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.7\Device\NANO100BN\Drive
+r -ID:\ARM\PACK\Nuvoton\NuMicro_DFP\1.0.7\Device\NANO100BN\Include --predefine=
+"__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 516" --predefine="_RTE_ SET
+A 1" --list=.\listings\startup_nano100series.lst RTE\Device\NANO130KE3BN\startu
+p_Nano100Series.s
 
 
 

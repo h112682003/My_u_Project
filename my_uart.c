@@ -1,8 +1,8 @@
 #include "Nano100Series.h" 
 
 void init_HCLK_HXT_32M(void);
-void init_UART0(uint32_t UART_TIME);
-void UART0_IRQHandler(void);
+void init_UART1(uint32_t UART_TIME);
+void UART1_IRQHandler(void);
 	
 void init_HCLK_HXT_32M(void)
 {
@@ -15,27 +15,27 @@ void init_HCLK_HXT_32M(void)
 	SYS_LockReg();
 }
 
-void init_UART0(uint32_t UART_TIME)
+void init_UART1(uint32_t UART_TIME)
 {
 	SYS_UnlockReg();
 	//--- CLK
-	CLK_EnableModuleClock(UART0_MODULE);
-	CLK_SetModuleClock(UART0_MODULE,CLK_CLKSEL1_UART_S_HXT,CLK_UART_CLK_DIVIDER(1));
+	CLK_EnableModuleClock(UART1_MODULE);
+	CLK_SetModuleClock(UART1_MODULE,CLK_CLKSEL1_UART_S_HXT,CLK_UART_CLK_DIVIDER(1));
 	//--- PIN
 	SYS->PB_L_MFP &= ~( SYS_PB_L_MFP_PB0_MFP_Msk | SYS_PB_L_MFP_PB1_MFP_Msk);
-	SYS->PB_L_MFP |= (SYS_PB_L_MFP_PB0_MFP_UART0_RX | SYS_PB_L_MFP_PB1_MFP_UART0_TX );//PB0->RX;PB1->TX;
+	SYS->PB_L_MFP |= (SYS_PB_L_MFP_PB4_MFP_UART1_RX | SYS_PB_L_MFP_PB5_MFP_UART1_TX );//PB4<-RX;PB5->TX;
 	SYS_LockReg();
 	//--- OPEN
-	UART_Open(UART0, UART_TIME);
+	UART_Open(UART1, UART_TIME);
 	//--- NVIC
-	UART_ENABLE_INT(UART0, UART_IER_RDA_IE_Msk);
-	NVIC_EnableIRQ(UART0_IRQn);
+	UART_ENABLE_INT(UART1, UART_IER_RDA_IE_Msk);
+	NVIC_EnableIRQ(UART1_IRQn);
 }
 
 //--- ISR
-void UART0_IRQHandler(void)
+void UART1_IRQHandler(void)
 {
 		uint8_t u8InChar;
-		u8InChar = UART_READ(UART0); /* Rx trigger level is 1 byte*/
-		UART_WRITE(UART0,u8InChar);
+		u8InChar = UART_READ(UART1); /* Rx trigger level is 1 byte*/
+		UART_WRITE(UART1,u8InChar);
 }

@@ -17,6 +17,7 @@ uint8_t i2c_read(uint8_t ack);
 void SysTick_Handler(void);
 void delay_ms(uint32_t ms);
 void init_systick(void);
+uint8_t get_systick(void);
 
 //my_uart.c
 void init_HCLK_HXT_32M(void);
@@ -30,13 +31,5 @@ int16_t bh1750(void);
 //my_timer.c
 void init_timer0(void);
 void TMR0_IRQHandler(void);
-
-//my_max30102_setWR.c
-void set_write_2(uint8_t i,uint8_t j);
-uint8_t set_read_1(uint8_t i,uint8_t j);
-
-//my_max30102.c
-uint8_t hr_spo2_id1(void);
-uint8_t hr_spo2_id2(void);
 
 #endif

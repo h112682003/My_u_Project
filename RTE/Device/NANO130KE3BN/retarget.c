@@ -312,10 +312,13 @@ void SendChar_ToUART(int ch)
 #ifndef DISABLE_UART
     while(DEBUG_PORT->FSR & UART_FSR_TX_FULL_F_Msk);
     DEBUG_PORT->THR = ch;
+		//買一送一 printf 裡面有打\n 就會送一個\r 記得砍掉
+		/*
     if(ch == '\n') {
         while(DEBUG_PORT->FSR & UART_FSR_TX_FULL_F_Msk);
         DEBUG_PORT->THR = '\r';
-    }
+		
+    }*/
 #endif
 }
 

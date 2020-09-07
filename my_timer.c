@@ -1,10 +1,13 @@
-#include "Nano100Series.h"   
+#include "Nano100Series.h"
+#include "stdio.h"
+
 void init_timer0(void);
 void TMR0_IRQHandler(void);
 
 
 void TMR0_IRQHandler(void){
-    TIMER_ClearIntFlag( TIMER0 );
+	//printf("----ONESECOND----\n");
+	TIMER_ClearIntFlag( TIMER0 );
 }
 
 void init_timer0(void){
@@ -14,7 +17,7 @@ void init_timer0(void){
 	CLK_SetModuleClock(TMR0_MODULE, CLK_CLKSEL1_TMR0_S_HXT, 0);
 	SYS_LockReg();
 	//--- OPEN
-	TIMER_Open(TIMER0, TIMER_PERIODIC_MODE, 2);
+	TIMER_Open(TIMER0, TIMER_PERIODIC_MODE, 1);
 	//--- Start
 	TIMER_Start(TIMER0);
 	//--- NVIC
